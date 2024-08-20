@@ -3,16 +3,16 @@
   <head>
     <meta charset="utf-8"/>
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-    <link rel="stylesheet" href="styles.css"/>
+    <link rel="stylesheet" href="landing_page_styles.css"/>
     <title>Sample Title</title>
   </head>
   <body>
     <header id="header">
-      <img id="header-img" src="https://s7.vitaminshoppe.com/is/image/VitaminShoppe/2237188_01?$OP_PDPZOOM$"/>
+      <img id="header-img" src="https://s7.vitaminshoppe.com/is/image/VitaminShoppe/2237188_01?$OP_PDPZOOM$" alt="energy-drink"/>
       <nav id="nav-bar">
-        <a href="#section-1" class="nav-link">1</a>
-        <a href="#section-2" class="nav-link">2</a>
-        <a href="#section-3" class="nav-link">3</a>
+        <a href="#anchor-1" class="nav-link">About Us</a>
+        <a href="#video-container" class="nav-link">Video</a>
+        <a href="#section-3" class="nav-link">Shop</a>
       </nav>
     </header>
     <section id="section-1">
@@ -23,12 +23,36 @@
       </form>
     </section>
     <section id="section-2">
-      <iframe id="video" src="https://www.youtube.com/embed/_W0bSen8Qjg"></iframe>
+        <div id="anchor-1"></div>
+        <div class="selling-point">
+            <img src="./images/adjust.svg"/>
+            <div>
+                <h1><span class="first-letter">C</span>ustomizable packages</h1>
+                <p>Choose which flavors you want for each quarter of the pack. Our selection of flavors values quanlity over quantity.</p>
+            </div>
+        </div>
+        <div class="selling-point">
+            <img src="./images/switch.svg"/>
+            <div>
+                <h1><span class="first-letter">C</span>lean Energy</h1>
+                <p>Uses natural sources of caffeine to energize you without the anxiety and crashing throughout the day.</p>
+            </div>
+        </div>
+        <div class="selling-point">
+            <img src="./images/personal.svg"/>
+            <div>
+                <h1><span class="first-letter">E</span>mployees You Can Trust</h1>
+                <p>We built ourselves from the ground up, so we prioritize each and every one of our customers that helped us get here.</p>
+            </div>
+        </div>
+        <div id="video-container">
+            <iframe id="video" src="https://www.youtube.com/embed/y-zQovGOmVI"></iframe>
+        </div>
     </section>
     <section id="section-3">
       <!--Submit urls are examples and not real-->
-      <form method="POST" action="shop/cart?buy=4">
-        <div id="4-pack">
+      <form method="POST">
+        <div class="pack">
           <h3>4-pack</h3>
           <div class="flavors">
             <h4>Select Flavors</h4>
@@ -73,11 +97,11 @@
                 </select>
               </div>
           </div>
-          <button type="submit">$8.00</button>
+          <button type="submit" class="cashout">$8.00</button>
         </div>
       </form>
-      <form method="POST" action="shop/cart?buy=8">
-        <div id="8-pack">
+      <form method="POST">
+        <div class="pack">
           <h3>8-pack</h3>
           <div class="flavors">
             <h4>Select Flavors</h4>
@@ -122,11 +146,11 @@
                 </select>
               </div>
           </div>
-          <button type="submit">$14.00</button>
+          <button type="submit" class="cashout">$14.00</button>
         </div>
       </form>
-      <form method="POST" action="shop/cart?buy=12">
-        <div id="12-pack">
+      <form method="POST">
+        <div class="pack">
           <h3>12-pack</h3>
           <div class="flavors">
             <h4>Select Flavors</h4>
@@ -171,7 +195,7 @@
                 </select>
               </div>
           </div>
-          <button type="submit">$18.00</button>
+          <button type="submit" class="cashout">$18.00</button>
         </div>
       </form>
     </section>
